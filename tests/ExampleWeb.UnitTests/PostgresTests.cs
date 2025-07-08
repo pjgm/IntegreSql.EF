@@ -7,8 +7,10 @@ namespace ExampleWeb.UnitTests;
 public class PostgresTests : UnitTestBase
 {
     private readonly UserService _service;
+    private static readonly string[] Expected = ["John", "Bill"];
 
-    public PostgresTests() : base(DatabaseType.Postgres)
+    public PostgresTests()
+        : base(DatabaseType.Postgres)
     {
         _service = new UserService(CreateDbContext());
     }
@@ -27,6 +29,6 @@ public class PostgresTests : UnitTestBase
 #pragma warning restore xUnit1026
     {
         var users = await _service.GetUsers();
-        Assert.Equal(new[] { "John", "Bill" }, users);
+        Assert.Equal(Expected, users);
     }
 }
