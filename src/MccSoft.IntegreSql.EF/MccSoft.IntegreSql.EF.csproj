@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <Version>0.12.2</Version>
+        <Version>1.0.0</Version>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>MCC Soft</Authors>
         <Description>Infrastructure to easily write **FAST** integration and unit tests using **REAL** databases in ASP.Net Core using EntityFramework.</Description>
@@ -11,6 +11,7 @@
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <RepositoryType>GitHub</RepositoryType>
 
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 
         <TargetFramework>net8.0</TargetFramework>
         <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
@@ -25,7 +26,7 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
         <PackageReference Include="Npgsql" Version="8.0.4" />
         <PackageReference Include="System.Text.Json" Version="8.0.4" />
-        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.31" />
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.4" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.31" />
     </ItemGroup>
     <ItemGroup>
