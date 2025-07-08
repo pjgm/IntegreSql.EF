@@ -239,7 +239,7 @@ public class NpgsqlDatabaseInitializer : BaseDatabaseInitializer
             _adjustNpgsqlDataSource?.Invoke(dataSourceBuilder);
             var dataSource = dataSourceBuilder.Build();
 
-            options.UseNpgsql(dataSource, _npgsqlOptionsAction);
+            options.UseNpgsql(dataSource.ConnectionString, _npgsqlOptionsAction);
         }
         else
         {
